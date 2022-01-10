@@ -126,9 +126,8 @@ function checkVis(id){
   }
 };
 
+// fonction qui remplace en bas et a droite de la position x;y dans l'arrey 'gridTest'
 function Remplace(gridTest,x,y){
-  // remplace en bas et a droite de la position x;y dans l'arrey 'gridTest'
-  gridTest = reverseArray(gridTest);
   let save = gridTest[y-1];
   for (let t = 0; t < save.length; t++) {
     if (t+1 >= x){
@@ -157,7 +156,6 @@ function checkAll(){
       }
     }
   }
-  grid = reverseArray(grid); // makes the array upside down
   return grid;
 };
 
@@ -175,11 +173,8 @@ function removeChoc(gridRemove){
   }
 };
 
-function reverseArray (arr){
-  // useless function xD
-  return arr
-};
 
+// function that cheks whether a chocolateicon is visible or not
 function VisOrNot(e){
   // retourne si un chocolat (e) est manger ou non
   if (e.classList.contains('visible')){
@@ -222,7 +217,8 @@ function startGame(){
       $("div#playingP2_AI").text("NOW PLAYING");
       diff_IA = document.getElementById('diff_VALUE').value;
     }else{
-      showEndSreen('width and height must be equals or less that 6 not higher',2)
+      showEndSreen('Width and height must be equals or less that 6 not higher!',2)
+
     }
   } else if (document.getElementById("startButton").getAttribute("value") == "Cancel"){
     document.getElementById("startButton").setAttribute("value", "Start");
@@ -255,8 +251,8 @@ function playTurn(){
   }
 };
 
+// Function (with preconditions) that defines what happens when you click on a piece of chocolate
 function doGame(e){
-  // whene you eat a Chocolate
 
   if(document.getElementById("startButton").getAttribute("value") != "Cancel"){
     // si on a pas lance le jeu
@@ -323,21 +319,7 @@ function doGame(e){
   }
 };
 
-
-function show_player(){
-  // check si c'est contre l'IA ou non
-  let playIA = q("#checkIA");
-  if (playIA.checked == true){
-    // affiche que c'est au joueur de jouer (l'IA joue au dessus)
-    if (playing_player == 0){
-      console.log("Joueur");
-    }
-  }else{
-    // quand c'est 1v1: affiche a qui c'est de jouer (joueur 1 ou joueur 2)
-    console.log("Joueur " + String(playing_player + 1));
-  }
-};
-
+// Function that makes the AI play and also checks whether it has won or not + shows when the game has ended and the respective winner
 function IA_checked(newGrid){
   if (NombrePosition(newGrid) != 0){
     // fait jouer l'IA
@@ -359,7 +341,6 @@ function IA_checked(newGrid){
           }, 200);
 
       }
-      show_player();
       if (NombrePosition(newGrid) !== 0){
         playTurn();
       }
@@ -416,9 +397,8 @@ function IA_play(difficulty){
   return newGrid;
 };
 
-
+// fonction qui retourne le nombre de position jouable de l'array en argument
 function NombrePosition(position){
-  // retourne le nombre de position jouable de l'array en argument
   let nb = 0;
   for (let i = 0; i < position.length; i++){
     for (let j = 0; j < position[i].length; j++){
@@ -430,7 +410,7 @@ function NombrePosition(position){
   return nb;
 };
 
-
+// function that gets a random number where "max" defines the max limit for the randomization
 function getRandomInt(max) {
   // retourne un nombre aleatoire dans [0;max[
   return Math.floor(Math.random() * max);

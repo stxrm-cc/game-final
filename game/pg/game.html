@@ -86,6 +86,7 @@
    <a href="#openModal" id="gear2open">
      <img id="gear" src="../img/gear.png" alt="Settings">
     </a>
+
     <div id="openModal" class="modalDialog">
       <div>
         <a href="#close" title="Close" class="close">X</a>
@@ -101,6 +102,7 @@
         <p id="debugPercent"></p> -->
         <br>
 
+
 <!-- Checkbox -->
 <div class="switch_box check1">
   <input type="checkbox" class="switch_1" id="checkIA">
@@ -109,9 +111,41 @@
 <div class="switch_box check3">
   <input type="checkbox" class="switch_1" id="checkError">
 </div>
+
 <!-- Class for Music Checkbox -->
 <div class="switch_box check2">
   <input type="checkbox" class="switch_1" id="checkMusic">
+</div>
+</div>
+</div>
+</div>
+
+<!-- Div for the modal when clicking the question mark icon to open the tutorial part  -->
+<div>
+  <a href="#tutoModal" id="markModal">
+    <img id="mark" src="../img/mark.png" alt="Tutorial">
+  </a>
+
+  <div id="tutoModal" class="modalDialog">
+    <div>
+      <a href="#close" title="Close" class="close">X</a>
+      <p class="settingsH2 superShadow2"> Tutorial </p>
+      <br>
+      <div id="tutoText">
+        <p> -> How to play? </p>
+      	<p style="color: #666;"> - The main goal is to NOT take the last chocolate of the grid;
+      	when you click on a chocolate you 'eat' it, and you also 'eat' the chocolate down
+      on both the horizontal and vertical lines to the right. </p>
+      <br>
+      <p> -> You can play in 2 modes: </p>
+
+      <p style="color: #666;"> - In a duel (1v1), you have to be 2, one starts (picked randomly) and then it is the turn of the other and so on...
+
+      <p style="color: #666;"> - Against an AI, of which you can choose the difficulty (0 to 100 with where 0 is the worst and 100 is the best).
+      </p>
+      <br>
+      <p style="line-height: 2.2vh;"><u> /!\</u> <i> The size of the board is limited to 6 by 6 </i></p>
+  </div>
 
   <!-- Script that sets the music button functions etc -->
   <script type="text/javascript">

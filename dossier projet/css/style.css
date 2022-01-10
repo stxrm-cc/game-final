@@ -151,6 +151,8 @@ body{
   position: absolute;
   left: 2%;
   bottom: 4%;
+  max-height: 40%;
+  max-width: auto;
 }
 
 .img5 {
@@ -214,10 +216,10 @@ body{
 }
 
 .rappelButton {
-  position: fixed;
+  position: relative;
   opacity: 1;
-  top: 10%;
-  left: 50%;
+  top: -1%;
+  left: -1%;
   border-radius: 10px;
   border: none;
   cursor: pointer;

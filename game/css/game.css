@@ -137,7 +137,7 @@ body, body * {
 
 /* adapted for all res */
 #rectangle {
-  width: 33%;
+  width: 33.5%;
   height: 4.5%;
   border: 0.4vh solid #666;
   top: 30.28%;
@@ -334,7 +334,21 @@ body, body * {
   left: 17.65%;
   width: 3vh;
   height: auto;
+}
+
+/* tutorial question mark - adapted */
+#mark {
+  cursor: pointer;
+  position: absolute;
+  top: 83.8%;
+  left: 19.8%;
+  width: 1.8vh;
+  height: auto;
   display: block;
+}
+
+#tutoText{
+  font-size: 1.5vh;
 }
 
 /*-------- Popup settings window ----------*/
@@ -355,7 +369,7 @@ body, body * {
 }
 .modalDialog > div {
     width: 60vh;
-    height: 55vh;
+    height: 58.7vh;
     position: relative;
     margin: 10% auto;
     padding: 0.5vh 2vh 1.3vh 2vh;
